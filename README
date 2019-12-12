@@ -7,6 +7,12 @@
  
  Make sure you read "Build SDL2 AGAR readme Linux" before attempting to build.
  
+ Remember to provide the following options to the agar ./configure script:
+ 
+ ./configure --with-sdl2 --without-sdl
+
+The standard AGAR readme follow from here:
+
     _       _       _     ___  
   / _ \   / _ \   / _ \  |  _ \ 
  | |_| | | (_| | | |_| | | |_) |
