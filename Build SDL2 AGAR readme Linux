@@ -1,0 +1,53 @@
+Ubuntu install notes
+
+Install gcc dev essentials
+sudo apt-get update
+sudo apt-get upgrade
+sudo apt-get install build-essential
+
+Install vscode
+
+Add c/c++ Intellisense support to vscode
+
+Install SDL2 libraries including dev versions
+
+Install freetype
+sudo apt install libfreetype6-dev
+
+Install libtool
+sudo apt-get install libtool-bin
+
+Install AGAR as per Linux instructions on AGAR site
+
+Copy the AGAR-1.5.0 Diff Files to the corresponding AGAR-1.5.0 directories
+
+If building a strict AGAR-1.5.0 compatible version do not copy the optional files in the GUI/Optional folder
+to the gui folder.
+
+If support for Widget Drawn event/callbacks is required copy the optional widget.c/h files to the gui folder.
+
+If SDL2 fast Texture map support is wanted then copy the remained of the optional files to the gui folder.
+(This feature will require you to recompile/build all AGAR applications against the new AGAR libraries)
+
+edit mk/build.lib.mk add --tag CC to options
+	LIBTOOLOPTS?=	--tag CC	--quiet
+
+./configure --enable-debug --with-sdl2 --without-sdl --with-libtool=/usr/bin/libtool
+
+make depend all
+sudo make install
+
+tests
+
+Change SDL require entry in tests/agarsdl/configure.in
+	REQUIRE(sdl, 2.0.8)
+
+In all tests/subdirs/configure and configure.in scripts remove the -Werror option
+
+./configure
+make depend all
+
+./agartest
+
+./agartest -d sdl2
+
