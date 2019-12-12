@@ -11,7 +11,7 @@
  
  ./configure --with-sdl2 --without-sdl
 
-The standard AGAR readme follow from here:
+The standard AGAR readme follows from here:
 
     _       _       _     ___  
   / _ \   / _ \   / _ \  |  _ \ 
