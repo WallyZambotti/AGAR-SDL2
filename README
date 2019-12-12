@@ -1,8 +1,8 @@
  This is NOT an offical AGAR 1.5.0 distribution.
  
- This is AGAR 1.5.0 with an additional SDL2 frame buffer driver.
+ This is AGAR 1.5.0 with an additional SDL2 frame buffer driver best suited for Linux/OSX.
  
- Currently works with the verification/vaildation AGAR test suite (agartest) and
+ Currently works with the verification/validation AGAR test suite (agartest) and
  OVCC the Open Virtual Color Computer Emulator.
  
  Make sure you read "Build SDL2 AGAR readme Linux" before attempting to build.
